@@ -1,0 +1,85 @@
+body {
+  font-family: "CMU Serif Roman", sans-serif;
+  font-size: x-large;
+  text-align: center;
+  background-color: #161822;
+  color: #e0dcd7;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #6dc2ff; 
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.name {
+  margin-top: 0vh;
+  padding-top: 0vh;
+  margin-bottom: 0;
+}
+
+.links {
+  margin-right: 0;
+  text-align: right;
+  padding: 0;
+}
+
+.projects-section {
+  margin: 0;
+  padding-top: 12vw;
+}
+
+.projects-column {
+  float: left;
+  width: calc(33.33% - 2vw);
+  margin: 1vw;
+  text-align: justify;
+}
+
+.projects-row:after {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.column {
+  float: left;
+  width: calc(50% - 2vw);
+  margin: 1vw;
+  text-align: justify;
+}
+
+row:after {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: calc(100% - 1vw);
+    margin: 1vw;
+  }
+  .projects-column {
+    width: calc(100% - 2vw);
+    margin: 2vw;
+  }
+  .name {
+    padding-top: 2vh;
+  }
+  .title{
+    padding-top: 45vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+

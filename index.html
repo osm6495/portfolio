@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Owen's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./font/font.css">
+  </head>
+  <body>
+    <div class="row">
+      <div class="column">
+        <div class="info">
+          <h1 class="name">Owen McCarthy</h1>
+          <p>owen@owen.biz</p>
+          <p>+1(585)252-6669</p>
+          <p>Mexico, NY 13114</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="links">
+          <h1 class="name">Useful Links</h1>
+          <p>GitHub: <a href=https://github.com/osm6495>https://github.com/osm6495</a></p>
+          <p>LinkedIn: <a href=https://www.linkedin.com/in/osm6495/>https://www.linkedin.com/in/osm6495/</a></p>
+          <p>Medium: <a href=https://medium.com/@omccarth333>https://medium.com/@omccarth333</a></p>
+      </div>
+    </div>
+    <div class="projects-section">
+      <h1 class="title">My Recent Projects</h1>
+      <div class="projects-row">
+        <div class="projects-column">
+          <h3>BookRecs Middleware - <a href=https://github.com/Plat-Nation/BookRecs-Middleware>GitHub</a></h3>
+          <p>
+            BookRecs is a project I started with a friend of mine I met working on the Platform Security team at Tesla. The goal is to set up
+            a book recommendation service. As one of the early steps of working on that project, I took on the creation of some Golang middleware for
+            use in our HTTP servers. The main modules I focused on were:
+            <ul>
+              <li>A decent logging solution using <a href=https://github.com/uber-go/zap>Zap</a></li>
+              <li>A check that incoming traffic includes an Authorization header</li>
+              <li>A simple handler to redirect HTTP traffic to HTTPS (although this will likely end up happening in our cloud configuration instead)</li>
+              <li>Tests and thorough documentation to make the library easier to use, as my partner on this project is new to the language</li>
+            </ul>
+          </p>
+        </div>
+        <div class="projects-column">
+          <h3>Platnet-gohttp - <a href=https://github.com/Plat-Nation/Platnet-gohttp>GitHub</a></h3>
+          <p>
+            The engineer I am working with on the BookRecs project is new to Golang, so I also created a simple HTTP server to demonstrate how to
+            use the middleware and how to create an API with Go. Since we are using the standard library's excellent net/http package, I also used it to
+            demonstrate the new changes to routing with ServeMux in Go 1.22 which added support for specific route patterns with wildcards like 
+            <code>GET /posts/{id}</code>
+          </p>
+        </div>
+        <div class="projects-column">
+          <h3>AppScan - <a href=https://github.com/osm6495/appscan>GitHub</a></h3>
+          <p>
+            AppScan is a CLI tool I created to automate my process for DNS querying and subdomain enumeration for bug bounty hunting. It also allows you to test the
+            endpoints you discover with any HTTP method you want and output the reponses to JSON. I'm aiming for it to follow the POSIX guidelines and the GNU
+            standards for CLI tools, in the hopes that it will be easy to plug it into existing automations and scripts that researchers use. I'm currently
+            working on rebuilding the tool in Golang to enable quicker development of additional modules, since I have some future plans for helpful additions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
